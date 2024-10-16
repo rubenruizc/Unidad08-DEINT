@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjercicioPresentacion.MainPage">
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+          <HorizontalStackLayout Margin="50,0,50,50">
+                <Label>Primary colors</Label>
+                <VerticalStackLayout Spacing="20" Margin="50,0,50,0">
+                    <BoxView MinimumHeightRequest="50" MinimumWidthRequest="50" BackgroundColor="Red" ></BoxView>
+                    <BoxView MinimumHeightRequest="50" MinimumWidthRequest="50" BackgroundColor="Yellow"></BoxView>
+                    <BoxView MinimumHeightRequest="50" MinimumWidthRequest="50" BackgroundColor="Blue"></BoxView>
+                </VerticalStackLayout>
+                <Label>Secondary colors</Label>
+                <VerticalStackLayout Spacing="20" Margin="50,0,50,0"> 
+                    <BoxView MinimumHeightRequest="50" MinimumWidthRequest="50" BackgroundColor="Green"></BoxView>
+                    <BoxView MinimumHeightRequest="50" MinimumWidthRequest="50" BackgroundColor="Orange"></BoxView>
+                    <BoxView MinimumHeightRequest="50" MinimumWidthRequest="50" BackgroundColor="Purple"></BoxView>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <Grid ColumnSpacing="50" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Primary colors" ></Label>
+                <BoxView BackgroundColor="Red" MinimumHeightRequest="50" MinimumWidthRequest="50" Grid.Column="1" ></BoxView>
+                <BoxView BackgroundColor="Yellow" MinimumHeightRequest="50" MinimumWidthRequest="50" Grid.Column="1" Grid.Row="1"></BoxView>
+                <BoxView BackgroundColor="Blue" MinimumHeightRequest="50" MinimumWidthRequest="50" Grid.Column="1" Grid.Row="2"></BoxView>
+                <Label Text="Secondary colors" Grid.Column="2"></Label>
+                <BoxView BackgroundColor="Green" MinimumHeightRequest="50" MinimumWidthRequest="50" Grid.Column="3"></BoxView>
+                <BoxView BackgroundColor="Orange" MinimumHeightRequest="50" MinimumWidthRequest="50" Grid.Column="3" Grid.Row="1"></BoxView>
+                <BoxView BackgroundColor="Purple" MinimumHeightRequest="50" MinimumWidthRequest="50" Grid.Column="3" Grid.Row="2"></BoxView>
+            </Grid>
+        </StackLayout>
+
+        
+    </ScrollView>
+
+</ContentPage>
