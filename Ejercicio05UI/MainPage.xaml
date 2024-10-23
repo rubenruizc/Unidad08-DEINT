@@ -13,7 +13,7 @@
         </ListView>
 
         <ImageButton
-            Source="amaru.png"
+            Source="sumablancosmall.png"
             BackgroundColor="LightBlue"
             CornerRadius="80"
             AbsoluteLayout.LayoutFlags="PositionProportional"
