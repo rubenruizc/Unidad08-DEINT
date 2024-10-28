@@ -6,27 +6,23 @@
     <ScrollView>
         <Border Stroke="MediumPurple"
         StrokeThickness="7"
-        HorizontalOptions="FillAndExpand"
+        StrokeShape="RoundRectangle 40,40,0,0"
                >
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="40,40,0,0" />
-            </Border.StrokeShape>
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                <Button    Text="Botón 1" BorderColor="Black" BorderWidth="5" Margin="10"></Button>
+                <Button    Text="Botón 2"  Margin="10"></Button>
+                <Button    Text="Botón 1"  Margin="10"></Button>
 
-            <StackLayout  VerticalOptions="Center" >
-                <VerticalStackLayout Spacing="20" >
-                    <Button   BackgroundColor="MediumPurple" CornerRadius="10" HeightRequest="50" WidthRequest="100" Text="Botón 1" BorderColor="Black" BorderWidth="5"></Button>
-                    <Button   BackgroundColor="MediumPurple" CornerRadius="10" HeightRequest="50" WidthRequest="100" Text="Botón 2"></Button>
-                    <Button   BackgroundColor="MediumPurple" CornerRadius="10" HeightRequest="50" WidthRequest="100" Text="Botón 3"></Button>
-                               
-                </VerticalStackLayout>
-                <HorizontalStackLayout Padding="20,20,20,20">
-                    <Label Text="Nombre:" Margin="0,0,10,0"></Label>
-                    <Entry BackgroundColor="LightBlue" WidthRequest="200"></Entry>
-                </HorizontalStackLayout>
+            
 
+            <HorizontalStackLayout>
+                <Label Text="Nombre:" Padding="10" FontAttributes="Bold"></Label>
+                <Entry BackgroundColor="LightBlue" MinimumWidthRequest="200"></Entry>
+            </HorizontalStackLayout>
 
+                
+            </VerticalStackLayout>
 
-            </StackLayout>
         </Border>
 
     </ScrollView>
