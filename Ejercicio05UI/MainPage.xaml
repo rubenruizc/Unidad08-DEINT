@@ -1,26 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio05UI.MainPage">
 
-    <AbsoluteLayout>
-        <ListView x:Name="FruitListView" ItemsSource="{Binding Fruits}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding FruitName}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Grid>
 
-        <ImageButton
-            Source="sumablancosmall.png"
-            BackgroundColor="LightBlue"
-            CornerRadius="80"
-            AbsoluteLayout.LayoutFlags="PositionProportional"
-            AbsoluteLayout.LayoutBounds=".95,.95,80,80">
-            
-            
-        </ImageButton>
-    </AbsoluteLayout>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-</ContentPage>
+            <ScrollView Grid.Row="0">
+                <VerticalStackLayout>
+                    <ListView x:Name="listaView" Margin="20">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="10">
+                                        <Label Text="{Binding Nombre}" FontSize="16" VerticalOptions="Center" />
+                                        <Label Text="{Binding Apellidos}" FontSize="16" VerticalOptions="Center" Margin="10,0,0,0"/>
+
+                                        <StackLayout HorizontalOptions="EndAndExpand" />
+
+                                        <Button ImageSource="lapiz.png"
+                                    Command="{Binding Path=BindingContext.EditarCommand, Source={x:Reference listaView}}"
+                                    CommandParameter="{Binding .}"
+                                    WidthRequest="40"
+                                    HeightRequest="40"
+                                    Margin="5"
+                                    BackgroundColor="White"
+                                     />
+
+                                        <Button ImageSource="basura.png"
+                                    Command="{Binding Path=BindingContext.EliminarCommand, Source={x:Reference listaView}}"
+                                    CommandParameter="{Binding .}"
+                                    WidthRequest="40"
+                                    HeightRequest="40"
+                                    Margin="5"
+                                    BackgroundColor="White"
+                                     />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </VerticalStackLayout>
+            </ScrollView>
+            <Button Grid.Row="0" HeightRequest="50" WidthRequest="50"
+                HorizontalOptions="End" VerticalOptions="End"
+                CornerRadius="80"
+                Margin="20"
+                ImageSource="sumablancosmall.png" BackgroundColor="Red"/>
+        </Grid>
+
+    </ContentPage>
+    

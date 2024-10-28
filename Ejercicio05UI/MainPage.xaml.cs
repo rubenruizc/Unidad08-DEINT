@@ -1,20 +1,21 @@
-﻿using Ejercicio05Ent;
-using System.Collections.ObjectModel;
+﻿using Ejercicio05DAL;
+using Ejercicio05Ent;
 namespace Ejercicio05UI
 {
-
     public partial class MainPage : ContentPage
     {
         public List<clsPersona> lista;
 
         public MainPage()
         {
+
             InitializeComponent();
 
-            lista = clsListaPersona.listaPersonas();
+            lista = clsListaPersonas.listaPersonas();
 
-            ListaView.ItemSource = lista;
+            listaView.ItemsSource = lista;
         }
 
     }
+
 }
